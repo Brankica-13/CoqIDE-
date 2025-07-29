@@ -14,5 +14,3 @@ Proof.
   rewrite <- mult_n_Sm.
   rewrite <- mult_n_O.
   reflexivity. Qed.
-
-(** It didn't work on my compiuter because of type *)
