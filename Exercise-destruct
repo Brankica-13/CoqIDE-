@@ -1,0 +1,18 @@
+Theorem negb_involutive : ∀ b : bool,
+  negb (negb b) = b.
+Proof.
+  intros b. destruct b eqn:E. (* destruct b divide our goal in two cases, first case is when b is true and second is when b i false*)
+  - reflexivity.          (* here - focus us on first subgoal, thr one where b is true and everuthing after thet is a proof of a first goal*)
+  - reflexivity. Qed.      (*first subgoal is proven and - focus us on second subgoal*)
+
+
+Theorem andb_commutative : ∀ b c, andb b c = andb c b.
+Proof.
+  intros b c. destruct b eqn:Eb. (destruct b eqn:Eb this part automatically sends us to first subgoal)
+  - destruct c eqn:Ec.
+    + reflexivity.
+    + reflexivity.
+  - destruct c eqn:Ec.
+    + reflexivity.
+    + reflexivity.
+Qed.
